@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 1012205223
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: astronautposter
+      Dependencies: {}
+    Info_1:
+      Name: cube
+      Dependencies: {}
+    Info_2:
+      Name: rocketposter
+      Dependencies: {}
