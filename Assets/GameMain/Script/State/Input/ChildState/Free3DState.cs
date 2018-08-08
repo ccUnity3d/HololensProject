@@ -10,17 +10,10 @@ public class Free3DState : InputState {
     public override void enter()
     {
         base.enter();
-        twoHandManipulatable = inputStateMachine.targetTransform.GetComponent<TwoHandManipulatable>();
-        if (twoHandManipulatable == null)
-        {
-            twoHandManipulatable = inputStateMachine.targetTransform.gameObject.AddComponent<TwoHandManipulatable>();
-        }
-        twoHandManipulatable.enabled = true;
     }
 
     public override void exit()
     {
         base.exit();
-        twoHandManipulatable.enabled = false;
     }
 }

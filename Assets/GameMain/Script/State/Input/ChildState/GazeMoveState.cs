@@ -36,6 +36,7 @@ public class GazeMoveState : InputState {
     {
         placeable.OnSelected();
         if (!placeable.IsPlacing) {
+            twoHandManipulatable.enabled = true;
             inputStateMachine.setState(Free3DState.Name);
         }
     }

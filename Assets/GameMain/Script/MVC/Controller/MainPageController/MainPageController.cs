@@ -106,7 +106,7 @@ public class MainPageController :UIController<MainPageController> {
     {
         int PlacementSurfacesDic = (int)obj; 
         go = GameObject.Instantiate<GameObject>(go);
-        go.transform.localScale = Vector3.one ;
+        //go.transform.localScale = Vector3.one ;
         inputStateMachine.targetTransform = go.transform;
         Placeable placeable = go.AddComponent<Placeable>();
         go.AddComponent<TwoHandManipulatable>();

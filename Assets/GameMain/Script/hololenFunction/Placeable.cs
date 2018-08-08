@@ -123,11 +123,17 @@ public class Placeable : MonoBehaviour {
             if (dist > 0)
             {
                 gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPosition, placementVelocity / dist);
+                StartCoroutine(Pause());
             }
             else {
              
             }
         }
+    }
+
+    IEnumerator Pause() {
+        yield return placementVelocity;
+        this.enabled = false;
     }
 
     public void OnSelected()
