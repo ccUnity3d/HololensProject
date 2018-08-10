@@ -10,6 +10,7 @@ public class Free3DState : InputState {
     public override void enter()
     {
         base.enter();
+        inputStateMachine.targetTransform = null;
     }
 
     public override void exit()

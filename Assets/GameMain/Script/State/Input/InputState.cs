@@ -22,7 +22,21 @@ public class InputState : MyState {
             return InputStateMachine.Instance;
         }
     }
-   
+
+    protected FunctionMachine functionMachine
+    {
+        get
+        {
+            return FunctionMachine.Instance;
+        }
+    }
+    protected Select3DMachine select3DMachine
+    {
+        get
+        {
+            return Select3DMachine.Instance;
+        }
+    }
 
     protected GazeManager gazeManager
     {

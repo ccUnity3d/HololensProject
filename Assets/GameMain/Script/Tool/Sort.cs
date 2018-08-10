@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sort : MonoBehaviour {
     
-    public float spacing = .05f;
+    public float spacing = .01f;
     private int left;
     private int right;
     MeshRenderer[] childs;
@@ -19,7 +19,8 @@ public class Sort : MonoBehaviour {
         float length =((width) * childs.Length )+ spacing * (childs.Length);
         for (int i = 0; i < childs.Length; i++)
         {
-            childs[i].transform.position = -Vector3.right*(length/2)+(length/(childs.Length)*(i))*Vector3.right + Vector3.right*(width + spacing)/2;
+            childs[i].transform.position = -Vector3.right * (length / 2) + (length / (childs.Length) * (i)) * Vector3.right * .5f; //+ Vector3.right*0.5f*(width + spacing)/2;
+            //childs[i].transform.localScale *= 0.5f;
         }
     }
 
@@ -37,11 +38,15 @@ public class Sort : MonoBehaviour {
                 {
                     right++;
                     childs[i].transform.position = Vector3.right * (0.15f + spacing) * right - Vector3.right * ((0.15f + spacing) / 2);
+                    childs[i].transform.localScale *= 0.5f;
+
                 }
                 else
                 {
                     left++;
                     childs[i].transform.position = -Vector3.right * (0.15f + spacing) * left + Vector3.right * ((0.15f + spacing) / 2);
+                    childs[i].transform.localScale *= 0.5f;
+
                 }
             }
         }
@@ -58,11 +63,15 @@ public class Sort : MonoBehaviour {
                 {
                     right++;
                     childs[i].transform.position = Vector3.right * (0.15f) * right + Vector3.right * (spacing / 2) * right;
+                    childs[i].transform.localScale *= 0.5f;
+
                 }
                 else
                 {
                     left++;
                     childs[i].transform.position = -Vector3.right * (0.15f) * left - Vector3.right * (spacing / 2) * left;
+                    childs[i].transform.localScale *= 0.5f;
+
                 }
             }
         }

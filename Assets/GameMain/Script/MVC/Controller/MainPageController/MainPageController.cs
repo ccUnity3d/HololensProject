@@ -68,7 +68,8 @@ public class MainPageController :UIController<MainPageController> {
         myTweenScale.duration = .5f;
         
         inputStateMachine.Ready();
-     
+        // 打开3D 菜单
+        UIManager.Instance.OnOpen(PageType.ModelMenuPage);
     }
 
     private void OnHideButton()
@@ -98,16 +99,19 @@ public class MainPageController :UIController<MainPageController> {
     private void OnProductItemClickByShowCAD(BumModel bumModel)
     {
         if (this.currentLoadObject==null) {
-            BumResourceManager.loadResource(bumModel.modelUri, null, null, BumResourceType.eBumResourceType_assetBundle, BumLoadingType.eBumLoadingType_www, BumResourcePoolType.ProductObject, bumModel.PlacementSurfaces, OnLoad);
+            BumResourceManager.loadResource(bumModel.modelUri, null, null, BumResourceType.eBumResourceType_assetBundle, BumLoadingType.eBumLoadingType_www, BumResourcePoolType.ProductObject, bumModel, OnLoad);
         }
     }
 
     private void OnLoad( GameObject go, object obj)
     {
-        int PlacementSurfacesDic = (int)obj; 
+        BumModel model = (BumModel)obj;
+        int PlacementSurfacesDic = model.PlacementSurfaces; 
         go = GameObject.Instantiate<GameObject>(go);
         //go.transform.localScale = Vector3.one ;
         inputStateMachine.targetTransform = go.transform;
+        ModelView modelView = go.AddComponent<ModelView>();
+        modelView.SetData(model);
         Placeable placeable = go.AddComponent<Placeable>();
         go.AddComponent<TwoHandManipulatable>();
         if (PlacementSurfacesDic == 0)

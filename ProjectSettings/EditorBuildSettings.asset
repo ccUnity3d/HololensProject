@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MainScene.unity
     guid: ed6284d192a9e7345a8940a483e83188
+  - enabled: 1
+    path: Assets/HoloToolkit-Examples/GazeRuler/Scenes/GazeRulerExample.unity
+    guid: 5cfd18f07ba96e54eb82e85707f53c58

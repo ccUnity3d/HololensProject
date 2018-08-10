@@ -20,11 +20,11 @@ public class SelectGoodState : InputState {
             inputStateMachine.setState(Free3DState.Name);
             return;
         }
-        //if (targetTransform.GetComponent<ModelView>()==null)
-        //{
-        //    inputStateMachine.setState(Free3DState.Name);
-        //    return;
-        //}
+        if (targetTransform.GetComponent<ModelView>() == null)
+        {
+            inputStateMachine.setState(Free3DState.Name);
+            return;
+        }
         inputStateMachine.targetTransform = targetTransform;
         threeDUI = modelMenuPage.skin.transform ;
         Vector3 distanceUIByModel = gazeManager.HitPosition;

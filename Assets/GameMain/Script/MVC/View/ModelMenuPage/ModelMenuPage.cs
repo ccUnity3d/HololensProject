@@ -6,20 +6,19 @@ public class ModelMenuPage :UIPage<ModelMenuPage> {
 
     public Transform OneLevelPlane;
     public Transform Editor_Button;
-    public Transform Particular_Button;
+    public Transform Function_Button;
     public Transform TwoLevelPlane;
     public Transform EditorPlane;
     public Transform Editor_Destory_Button;
-    public Transform Editor_Move_Button;
-    public Transform Editor_Rotate_Button;
-    public Transform Editor_Scale_Button;
+    public Transform Editor_Place_Button;
+    public Transform Editor_Adjust_Button;
     public Transform Editor_Home_Button;
-    public Transform Particular_Home_Button;
-    public Transform ParticularPlane;
-    public Transform Particular_OverviewOfEquipment_Button;
-    public Transform Particular_BimFrom_Button;
-    public Transform Particular_Explode_Button;
-    public Transform Particular_PrinciplePlay_Button;
+    public Transform Info_Button;
+    public Transform FunctionPlane;
+    public Transform Function_Home_Button;
+    public Transform Material_Button;
+    public Transform Measure_Button;
+    public Transform Sort_Button;
 
     public override void OnInstance()
     {
@@ -35,24 +34,23 @@ public class ModelMenuPage :UIPage<ModelMenuPage> {
 
         OneLevelPlane = BumUITool.GetUIComponent<Transform>(skin.transform, "OneLevel");
         Editor_Button = BumUITool.GetUIComponent<Transform>(OneLevelPlane, "Editor_Button");
-        Particular_Button = BumUITool.GetUIComponent<Transform>(OneLevelPlane, "Particular_Button");
+        Function_Button = BumUITool.GetUIComponent<Transform>(OneLevelPlane, "Function_Button");
         TwoLevelPlane = BumUITool.GetUIComponent<Transform>(skin.transform, "TwoLevel");
         EditorPlane = BumUITool.GetUIComponent<Transform>(TwoLevelPlane, "EditorPlane");
         Editor_Destory_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Destory_Button");
-        Editor_Move_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Move_Button");
-        Editor_Rotate_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Rotate_Button");
-        Editor_Scale_Button = BumUITool.GetUIComponent<Transform>(EditorPlane,"Editor_Scale_Button");
+        Editor_Place_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Place_Button");
+        Editor_Adjust_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Adjust_Button");
         Editor_Home_Button = BumUITool.GetUIComponent<Transform>(EditorPlane, "Editor_Home_Button");
-        ParticularPlane = BumUITool.GetUIComponent<Transform>(TwoLevelPlane, "ParticularPlane");
-        Particular_OverviewOfEquipment_Button = BumUITool.GetUIComponent<Transform>(ParticularPlane, "Particular_OverviewOfEquipment_Button");
-        Particular_BimFrom_Button = BumUITool.GetUIComponent<Transform>(ParticularPlane, "Particular_BimFrom_Button");
-        Particular_Explode_Button = BumUITool.GetUIComponent<Transform>(ParticularPlane, "Particular_Explode_Button");
-        Particular_PrinciplePlay_Button = BumUITool.GetUIComponent<Transform>(ParticularPlane, "Particular_PrinciplePlay_Button");
-        Particular_Home_Button = BumUITool.GetUIComponent<Transform>(ParticularPlane, "Particular_Home_Button");
+        FunctionPlane = BumUITool.GetUIComponent<Transform>(TwoLevelPlane, "FunctionPlane");
+        Function_Home_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Function_Home_Button");
+        Material_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Material_Button");
+        Sort_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Sort_Button");
+        Measure_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Measure_Button");
+        Info_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Info_Button");
         OneLevelPlane.gameObject.AddComponent<Sort>();
         //modelMenuPage.TwoLevelPlane.gameObject.AddComponent<Sort>();
         EditorPlane.gameObject.AddComponent<Sort>();
-        ParticularPlane.gameObject.AddComponent<Sort>();
+        FunctionPlane.gameObject.AddComponent<Sort>();
 
     }
 

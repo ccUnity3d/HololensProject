@@ -33,7 +33,7 @@ public class UIManager : MySingleton<UIManager> {
 
     public void Inject()
     {
-        //inject(PageType.ModelMenuPage, ModelPageController.Instance);
+        inject(PageType.ModelMenuPage, ModelPageController.Instance);
         //inject(PageType.LoginPage,LoginPageController.Instance);
         inject(PageType.MainPage,MainPageController.Instance);
       
