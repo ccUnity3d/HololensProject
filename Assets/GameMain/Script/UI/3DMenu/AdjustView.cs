@@ -39,8 +39,8 @@ public class AdjustView : MonoBehaviour, BaseInput
     private void Start()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
-        material_normal = "mat_button_Home_01";
-        material_Highlighted = "mat_button_Home_02";
+        material_normal = "mat_button_Adjust_01";
+        material_Highlighted = "mat_button_Adjust_02";
     }
     public void OnFocusEnter()
     {

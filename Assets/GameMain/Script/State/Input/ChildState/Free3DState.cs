@@ -11,6 +11,7 @@ public class Free3DState : InputState {
     {
         base.enter();
         inputStateMachine.targetTransform = null;
+        BumUITool.SetActionFalse(modelMenuPage.skin);
     }
 
     public override void exit()

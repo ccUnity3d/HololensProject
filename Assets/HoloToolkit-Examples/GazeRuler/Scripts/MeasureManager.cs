@@ -15,6 +15,8 @@ namespace HoloToolkit.Examples.GazeRuler
     /// </summary>
     public class MeasureManager : Singleton<MeasureManager>, IHoldHandler, IInputClickHandler
     {
+        // 是否可以测量
+        public bool isMeasureManager = false;
         private IGeometry manager;
         public GeometryMode Mode;
 
@@ -43,6 +45,9 @@ namespace HoloToolkit.Examples.GazeRuler
         // place spatial point
         public void OnSelect()
         {
+            if (!isMeasureManager) { 
+                return ;
+            }
             manager.AddPoint(LinePrefab, PointPrefab, TextPrefab);
         }
 

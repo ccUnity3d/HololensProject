@@ -87,7 +87,7 @@ public class ProductItemFunction : UGUIItemFunction,IBeginDragHandler,IEndDragHa
     public override void Render()
     {
         base.Render();
-        Debug.Log(productData.thumbnailUri);
+        //Debug.Log(productData.thumbnailUri);
         BumResourceManager.loadResource(productData.thumbnailUri,onLoadSetTextrue,null,BumResourceType.eBumResourceType_texture2D);
     }
     private void onLoadSetTextrue(object obj) {

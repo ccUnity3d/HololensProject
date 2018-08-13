@@ -240,9 +240,9 @@ public class BumResourceLoader
             {
                 texture = www.texture;
 
-                pool.addData(path, texture, BumResourceType.eBumResourceType_texture2D);
+                //pool.addData(path, texture, BumResourceType.eBumResourceType_texture2D);
 
-                if (!existAssetCache) createCache(url, texture, BumResourceType.eBumResourceType_texture2D);
+                //if (!existAssetCache) createCache(url, texture, BumResourceType.eBumResourceType_texture2D);
             }
 
             onloaded(texture);

@@ -33,8 +33,8 @@ public class SortView : MonoBehaviour , BaseInput
     private void Start()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
-        material_normal = "mat_button_Editor_01";
-        material_Highlighted = "mat_button_Editor_02";
+        material_normal = "mat_button_Sort_01";
+        material_Highlighted = "mat_button_Sort_02";
     }
 
     public void OnFocusEnter()

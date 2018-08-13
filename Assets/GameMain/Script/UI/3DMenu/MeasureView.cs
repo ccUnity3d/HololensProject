@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HoloToolkit.Unity.InputModule;
 using UnityEngine;
-
+using HoloToolkit.Examples.GazeRuler;
 public class MeasureView : MonoBehaviour ,BaseInput
 {
     private string material_normal;
@@ -32,8 +32,9 @@ public class MeasureView : MonoBehaviour ,BaseInput
     private void Start()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
-        material_normal = "mat_button_Editor_01";
-        material_Highlighted = "mat_button_Editor_02";
+        material_normal = "mat_button_Measure_01";
+        material_Highlighted = "mat_button_Measure_02";
+        this.gameObject.AddComponent<MeasureManager>();
     }
 
     public void OnFocusEnter()

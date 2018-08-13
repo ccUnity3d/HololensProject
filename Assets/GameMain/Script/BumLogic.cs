@@ -66,7 +66,7 @@ public class BumLogic
         //}
         //BumRep.uiManager.openWindow<BumUIMainPage>();
         //BumRep.uiManager.openWindow<BumUIBottomTools>();
-        UIManager.Instance.OnOpen(PageType.MainPage);
+        //UIManager.Instance.OnOpen(PageType.MainPage);
     }
 
     public void syncUserConfig()

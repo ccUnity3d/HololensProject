@@ -205,7 +205,7 @@ public class UIManager : MySingleton<UIManager> {
         }
         finally
         {
-            Debug.Log(" onLoaded");
+            //Debug.Log(" onLoaded");
         }
 
 

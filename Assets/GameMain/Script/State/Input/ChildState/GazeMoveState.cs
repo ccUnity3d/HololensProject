@@ -11,6 +11,7 @@ public class GazeMoveState : InputState {
     private GestureRecognizer gestureRecognizer;
     TwoHandManipulatable twoHandManipulatable;
     private Placeable placeable;
+    private ModelView modelView;
     public override void enter()
     {
         base.enter();
@@ -22,6 +23,14 @@ public class GazeMoveState : InputState {
             twoHandManipulatable = inputStateMachine.targetTransform.gameObject.AddComponent<TwoHandManipulatable>();
         }
         twoHandManipulatable.enabled = false;
+        modelView = inputStateMachine.targetTransform.GetComponent<ModelView>();
+        if (modelView == null)
+        {
+            Debug.LogError("no exit ModelView");
+        }
+        else {
+            modelView.enabled = false;
+        }
         placeable = inputStateMachine.targetTransform.GetComponent<Placeable>();
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
@@ -37,6 +46,7 @@ public class GazeMoveState : InputState {
         placeable.OnSelected();
         if (!placeable.IsPlacing) {
             twoHandManipulatable.enabled = true;
+            modelView.enabled = true;
             inputStateMachine.setState(Free3DState.Name);
         }
     }
@@ -45,6 +55,7 @@ public class GazeMoveState : InputState {
     {
         base.exit();
         twoHandManipulatable.enabled = true;
+        modelView.enabled = true;
         gestureRecognizer.StopCapturingGestures();
         gestureRecognizer.Tapped -= TappedEvent;
     }

@@ -15,6 +15,13 @@ public class PlaceView : MonoBehaviour, BaseInput
             return Select3DMachine.Instance;
         }
     }
+    private InputStateMachine inputStateMachine
+    {
+        get
+        {
+            return InputStateMachine.Instance;
+        }
+    }
     private AudioManager audioManager
     {
         get
@@ -29,11 +36,12 @@ public class PlaceView : MonoBehaviour, BaseInput
             return ResourcesPacker.Instance;
         }
     }
+
     private void Start()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
-        material_normal = "mat_button_Editor_01";
-        material_Highlighted = "mat_button_Editor_02";
+        material_normal = "mat_button_Place_01";
+        material_Highlighted = "mat_button_Place_02";
     }
 
     public void OnFocusEnter()
@@ -50,7 +58,8 @@ public class PlaceView : MonoBehaviour, BaseInput
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
-        select3DMachine.setState(PlaceState.Name);
+        //select3DMachine.setState(PlaceState.Name);
+        inputStateMachine.setState(GazeMoveState.Name);
     }
 
     public void OnInputDown(InputEventData eventData)

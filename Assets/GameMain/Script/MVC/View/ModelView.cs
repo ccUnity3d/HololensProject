@@ -23,6 +23,7 @@ public class ModelView : MonoBehaviour , IInputClickHandler
     {
         // 显示UI
         inputStateMachine.setState(SelectGoodState.Name);
+        Debug.Log("enter SelectGoodState");
     }
 
     // Use this for initialization

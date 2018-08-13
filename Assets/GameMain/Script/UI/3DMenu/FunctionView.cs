@@ -35,8 +35,8 @@ public class FunctionView : MonoBehaviour, BaseInput
     void Start()
     {
         meshRenderer = this.GetComponent<MeshRenderer>();
-        material_normal = "mat_button_Particular_01";
-        material_Highlighted = "mat_button_Particular_02";
+        material_normal = "mat_button_Function_01";
+        material_Highlighted = "mat_button_Function_02";
     }
 
     public void OnFocusEnter()
