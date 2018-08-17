@@ -40,18 +40,19 @@ public class HomeEditorView : MonoBehaviour, BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
         editorMachine.setState(HomeEditorState.Name);
+        Debug.Log("HomeEditorState");
     }
 
     public void OnInputDown(InputEventData eventData)

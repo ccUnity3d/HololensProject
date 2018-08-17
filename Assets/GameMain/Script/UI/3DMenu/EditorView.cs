@@ -38,12 +38,12 @@ public class EditorView : MonoBehaviour , BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)

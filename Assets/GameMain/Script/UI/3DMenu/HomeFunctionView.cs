@@ -39,18 +39,19 @@ public class HomeFunctionView : MonoBehaviour, BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
         select3DMachine.setState(FunctionObjectState.Name);
+        Debug.Log("FunctionObjectState");
     }
 
     public void OnInputDown(InputEventData eventData)

@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 127524055}
   - component: {fileID: 127524056}
   - component: {fileID: 127524057}
+  - component: {fileID: 127524058}
   m_Layer: 0
   m_Name: App
   m_TagString: Untagged
@@ -302,6 +303,19 @@ MonoBehaviour:
   mFont: []
   mComboNumber: []
   mSprite: []
+--- !u!114 &127524058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127524054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc642c96e03b234583a03b7016fba5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterAudio: {fileID: 8300000, guid: 0399e5b5a5b3cf248a2a5f54feb23dac, type: 3}
+  onclickAudio: {fileID: 8300000, guid: 3648a5f59503d234392c6c056dbea825, type: 3}
 --- !u!1001 &145589375
 Prefab:
   m_ObjectHideFlags: 0

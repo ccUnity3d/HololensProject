@@ -11,23 +11,26 @@ public class Sort : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         childs = this.GetComponentsInChildren<MeshRenderer>();
+        float width = childs[0].GetComponent<BoxCollider>().size.x;
         if (childs.Length<=0)
         {
             return;
         }
-        float width = childs[0].GetComponent<BoxCollider>().size.x;
+        
         float length =((width) * childs.Length )+ spacing * (childs.Length);
         for (int i = 0; i < childs.Length; i++)
         {
-            childs[i].transform.position = -Vector3.right * (length / 2) + (length / (childs.Length) * (i)) * Vector3.right * .5f; //+ Vector3.right*0.5f*(width + spacing)/2;
+            
+            //-Vector3.right * (length / 2) + (length / (childs.Length) * (i)) * Vector3.right * .5f; //+ Vector3.right*0.5f*(width + spacing)/2;
             //childs[i].transform.localScale *= 0.5f;
         }
+        GroupPlane();
     }
 
     void GroupPlane()
     {
         MeshRenderer[] childs = this.GetComponentsInChildren<MeshRenderer>();
-
+        float width = childs[0].GetComponent<BoxCollider>().size.x;
         if (childs.Length % 2 == 0)
         {
             // 偶数
@@ -36,16 +39,18 @@ public class Sort : MonoBehaviour {
                 //index
                 if (i % 2 == 0)
                 {
+                    childs[i].transform.position = this.transform.position + (width/2 + spacing ) * Vector3.right *(i/2)+ (width/2 + spacing) * Vector3.right;
                     right++;
-                    childs[i].transform.position = Vector3.right * (0.15f + spacing) * right - Vector3.right * ((0.15f + spacing) / 2);
-                    childs[i].transform.localScale *= 0.5f;
+                    //childs[i].transform.position = Vector3.right * (0.15f + spacing) * right - Vector3.right * ((0.15f + spacing) / 2);
+                    //childs[i].transform.localScale *= 0.5f;
 
                 }
                 else
                 {
+                    childs[i].transform.position = this.transform.position - (width + spacing ) * Vector3.right+2 * (-left * width) * Vector3.right;
                     left++;
-                    childs[i].transform.position = -Vector3.right * (0.15f + spacing) * left + Vector3.right * ((0.15f + spacing) / 2);
-                    childs[i].transform.localScale *= 0.5f;
+                    //childs[i].transform.position = -Vector3.right * (0.15f + spacing) * left + Vector3.right * ((0.15f + spacing) / 2);
+                    //childs[i].transform.localScale *= 0.5f;
 
                 }
             }

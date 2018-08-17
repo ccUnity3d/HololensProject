@@ -47,10 +47,10 @@ public class ModelMenuPage :UIPage<ModelMenuPage> {
         Sort_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Sort_Button");
         Measure_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Measure_Button");
         Info_Button = BumUITool.GetUIComponent<Transform>(FunctionPlane, "Info_Button");
-        OneLevelPlane.gameObject.AddComponent<Sort>();
+        //OneLevelPlane.gameObject.AddComponent<Sort>();
         //modelMenuPage.TwoLevelPlane.gameObject.AddComponent<Sort>();
-        EditorPlane.gameObject.AddComponent<Sort>();
-        FunctionPlane.gameObject.AddComponent<Sort>();
+        //EditorPlane.gameObject.AddComponent<Sort>();
+        //FunctionPlane.gameObject.AddComponent<Sort>();
 
     }
 

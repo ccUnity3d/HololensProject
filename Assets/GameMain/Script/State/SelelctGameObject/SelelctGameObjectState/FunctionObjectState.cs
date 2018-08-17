@@ -19,5 +19,7 @@ public class FunctionObjectState : Select3DState
     public override void exit()
     {
         base.exit();
+        UITool.SetActionFalse(modelMenuPage.FunctionPlane.gameObject);
+
     }
 }
