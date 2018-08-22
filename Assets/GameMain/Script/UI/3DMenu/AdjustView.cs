@@ -8,6 +8,7 @@ public class AdjustView : MonoBehaviour, BaseInput
     private string material_normal;
     private string material_Highlighted;
     private MeshRenderer meshRenderer;
+    private bool toggle = false;
     private Select3DMachine select3DMachine
     {
         get
@@ -45,18 +46,26 @@ public class AdjustView : MonoBehaviour, BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
-        select3DMachine.setState(AdjustState.Name);
+        toggle = !toggle;
+        if (toggle)
+        {
+            editorMachine.setState(AdjustState.Name);
+        }
+        else
+        {
+            editorMachine.setState(AdjustCancelState.Name);
+        }
     }
 
     public void OnInputDown(InputEventData eventData)

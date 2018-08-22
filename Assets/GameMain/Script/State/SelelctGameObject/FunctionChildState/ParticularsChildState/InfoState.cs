@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoState : FunctionState
 {
-    public const string Name = "BimFromState";
+    public const string Name = "InfoState";
     ModelView modelView;
     public override void enter()
     {

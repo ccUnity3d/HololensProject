@@ -16,10 +16,8 @@ namespace HoloToolkit.Examples.GazeRuler
     public class MeasureManager : Singleton<MeasureManager>, IHoldHandler, IInputClickHandler
     {
         // 是否可以测量
-        public bool isMeasureManager = false;
         private IGeometry manager;
         public GeometryMode Mode;
-
         // set up prefabs
         public GameObject LinePrefab;
         public GameObject PointPrefab;
@@ -28,7 +26,7 @@ namespace HoloToolkit.Examples.GazeRuler
 
         private void Start()
         {
-            InputManager.Instance.PushFallbackInputHandler(gameObject);
+            //InputManager.Instance.PushFallbackInputHandler(gameObject);
 
             // inti measure mode
             switch (Mode)
@@ -45,9 +43,9 @@ namespace HoloToolkit.Examples.GazeRuler
         // place spatial point
         public void OnSelect()
         {
-            if (!isMeasureManager) { 
-                return ;
-            }
+            //if (!isMeasureManager) { 
+            //    return ;
+            //}
             manager.AddPoint(LinePrefab, PointPrefab, TextPrefab);
         }
 
@@ -111,7 +109,7 @@ namespace HoloToolkit.Examples.GazeRuler
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        OnSelect();
+        //OnSelect();
     }
 }
 

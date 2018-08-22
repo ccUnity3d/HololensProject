@@ -34,6 +34,20 @@ public class MainPageController :UIController<MainPageController> {
         }
     }
 
+    private FunctionMachine functionMachine
+    {
+        get
+        {
+            return FunctionMachine.Instance;
+        }
+    }
+    private EditorMachine editorMachine
+    {
+        get
+        {
+            return EditorMachine.Instance;
+        }
+    }
     public bool isManipulation;
     public override void OnInstance()
     {
@@ -68,6 +82,8 @@ public class MainPageController :UIController<MainPageController> {
         myTweenScale.duration = .5f;
         
         inputStateMachine.Ready();
+        functionMachine.Ready();
+        editorMachine.Ready();
         // 打开3D 菜单
         UIManager.Instance.OnOpen(PageType.ModelMenuPage);
     }

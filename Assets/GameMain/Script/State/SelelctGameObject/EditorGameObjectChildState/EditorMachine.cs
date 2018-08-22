@@ -9,6 +9,7 @@ public class EditorMachine : BaseStateMachine<EditorState, EditorMachine>
     {
         addState(HomeEditorState.Name,new HomeEditorState());
         addState(AdjustState.Name, new AdjustState());
+        addState(AdjustCancelState.Name, new AdjustCancelState());
         addState(DestoryState.Name,new DestoryState());
         addState(PlaceState.Name,new PlaceState());
     }

@@ -32,6 +32,7 @@ public class GazeMoveState : InputState {
             modelView.enabled = false;
         }
         placeable = inputStateMachine.targetTransform.GetComponent<Placeable>();
+        placeable.enabled = true;
         gestureRecognizer = new GestureRecognizer();
         gestureRecognizer.SetRecognizableGestures(GestureSettings.Tap);
 

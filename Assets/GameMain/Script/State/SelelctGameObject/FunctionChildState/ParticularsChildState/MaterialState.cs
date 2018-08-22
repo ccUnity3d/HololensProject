@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class MaterialState : FunctionState
 {
-    public const string Name = "ExPlodeState";
+    public const string Name = "MaterialState";
     public bool idDown = false;
     ModelView modelView;
+    private FunctionMachine functionMachine
+    {
+        get
+        {
+            return FunctionMachine.Instance;
+        }
+    }
     public override void enter()
     {
         base.enter();

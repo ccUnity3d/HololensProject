@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HomeFunctionState : FunctionState
 {
-    public const string Name = "HomeParticularState";
+    public const string Name = "HomeFunctionState";
     // Use this for initialization
     public override void enter()
     {

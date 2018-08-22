@@ -32,7 +32,8 @@ public class DestoryState : EditorState
         }
         GameObject.DestroyObject(inputStateMachine.targetTransform.gameObject, 0.1f);
         inputStateMachine.targetTransform = null;
-        functionMachine.setState(HomeFunctionState.Name);
+        inputStateMachine.setState(Free3DState.Name);
+        //functionMachine.setState(HomeFunctionState.Name);
         //if (globalConfig.IsLoadWorldAnchorStore)
         //{
         //    string[] ids = mainPageController.worldAnchorStore.GetAllIds();

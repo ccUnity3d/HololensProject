@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SortState : FunctionState
 {
-    public const string Name = "OverviewOfEquipmentState";
+    public const string Name = "SortState";
     ModelView modelView;
     public override void enter()
     {

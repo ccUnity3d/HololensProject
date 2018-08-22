@@ -8,13 +8,13 @@ public class HomeFunctionView : MonoBehaviour, BaseInput
     private string material_normal;
     private string material_Highlighted;
     private MeshRenderer meshRenderer;
-    private Select3DMachine select3DMachine
-    {
-        get
-        {
-            return Select3DMachine.Instance;
+    
+    private FunctionMachine functionMachine {
+        get {
+            return FunctionMachine.Instance;
         }
     }
+
     private AudioManager audioManager
     {
         get
@@ -50,7 +50,7 @@ public class HomeFunctionView : MonoBehaviour, BaseInput
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
-        select3DMachine.setState(FunctionObjectState.Name);
+        functionMachine.setState(HomeFunctionState.Name);
         Debug.Log("FunctionObjectState");
     }
 

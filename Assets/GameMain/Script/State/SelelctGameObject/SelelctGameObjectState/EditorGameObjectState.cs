@@ -20,7 +20,7 @@ public class EditorGameObjectState : Select3DState
     public override void exit()
     {
         base.exit();
-        UITool.SetActionFalse(modelMenuPage.EditorPlane.gameObject);
+        //UITool.SetActionFalse(modelMenuPage.EditorPlane.gameObject);
 
     }
 

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AdjustState : EditorState {
+public class AdjustCancelState : EditorState
+{
 
-    public const string Name = "AdjustState";
+    public const string Name = "AdjustCancelState";
 
     public override void enter()
     {
         base.enter();
         // 旋转
-
     }
 
     public override void exit()

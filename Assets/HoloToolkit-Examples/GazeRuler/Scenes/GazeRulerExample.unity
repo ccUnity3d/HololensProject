@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b108b9b117b7e4a99657e352d1e27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mode: 4
+  Mode: 0
   LinePrefab: {fileID: 1000013919465970, guid: 24292e31cfee75844898d532649e8003, type: 2}
   PointPrefab: {fileID: 1000012130063850, guid: cfe406a44797d604981e0039a8d07127,
     type: 2}

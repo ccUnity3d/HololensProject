@@ -8,13 +8,13 @@ public class PlaceView : MonoBehaviour, BaseInput
     private string material_normal;
     private string material_Highlighted;
     private MeshRenderer meshRenderer;
-    private Select3DMachine select3DMachine
-    {
-        get
-        {
-            return Select3DMachine.Instance;
-        }
-    }
+    //private Select3DMachine select3DMachine
+    //{
+    //    get
+    //    {
+    //        return Select3DMachine.Instance;
+    //    }
+    //}
     private InputStateMachine inputStateMachine
     {
         get
@@ -47,12 +47,12 @@ public class PlaceView : MonoBehaviour, BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
@@ -64,11 +64,11 @@ public class PlaceView : MonoBehaviour, BaseInput
 
     public void OnInputDown(InputEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     public void OnInputUp(InputEventData eventData)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

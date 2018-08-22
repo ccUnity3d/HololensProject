@@ -44,12 +44,12 @@ public class DestoryView : MonoBehaviour , BaseInput
     public void OnFocusEnter()
     {
         audioManager.OnEnterAudio();
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
@@ -59,9 +59,11 @@ public class DestoryView : MonoBehaviour , BaseInput
             return;
         }
         audioManager.OnClickAudio();
-        editorMachine.setState(DestoryState.Name);
         UITool.SetActionFalse(ModelMenuPage.Instance.EditorPlane.gameObject);
-        UITool.SetActionFalse(ModelMenuPage.Instance.skin.transform.gameObject);
+        UITool.SetActionTrue(ModelMenuPage.Instance.OneLevelPlane.gameObject);
+        //UITool.SetActionFalse(ModelMenuPage.Instance.skin.transform.gameObject);
+        editorMachine.setState(DestoryState.Name);
+       
     }
 
     public void OnInputDown(InputEventData eventData)

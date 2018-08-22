@@ -14,6 +14,10 @@ public class ModelView : MonoBehaviour , IInputClickHandler
             return InputStateMachine.Instance;
         }
     }
+    protected FunctionMachine FunctionMachine {
+    get {
+            return FunctionMachine.Instance;
+        } }
 
     public void SetData(BumModel bumModel) {
         this.modelData = bumModel;
@@ -21,8 +25,13 @@ public class ModelView : MonoBehaviour , IInputClickHandler
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
+        //if (FunctionMachine.CurrentState is MeasureState) {
+        //}
+        //else
+        //{
+            inputStateMachine.setState(SelectGoodState.Name);
+        //}
         // 显示UI
-        inputStateMachine.setState(SelectGoodState.Name);
         Debug.Log("enter SelectGoodState");
     }
 

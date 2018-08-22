@@ -8,11 +8,11 @@ public class MeasureView : MonoBehaviour ,BaseInput
     private string material_normal;
     private string material_Highlighted;
     private MeshRenderer meshRenderer;
-    private Select3DMachine select3DMachine
+    private FunctionMachine functionMachine
     {
         get
         {
-            return Select3DMachine.Instance;
+            return FunctionMachine.Instance;
         }
     }
     private AudioManager audioManager
@@ -34,23 +34,23 @@ public class MeasureView : MonoBehaviour ,BaseInput
         meshRenderer = this.GetComponent<MeshRenderer>();
         material_normal = "mat_button_Measure_01";
         material_Highlighted = "mat_button_Measure_02";
-        this.gameObject.AddComponent<MeasureManager>();
+        
     }
 
     public void OnFocusEnter()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_Highlighted];
     }
 
     public void OnFocusExit()
     {
-        meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
+        //meshRenderer.sharedMaterial = ResourcesPacker.mLaodMater[material_normal];
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
-        select3DMachine.setState(MeasureState.Name);
+        functionMachine.setState(MeasureState.Name);
     }
 
     public void OnInputDown(InputEventData eventData)

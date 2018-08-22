@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FunctionObjectState : Select3DState
 {
-    public const string Name = "ParticularsGameObjectState";
+    public const string Name = "FunctionObjectState";
 
     public override void enter()
     {
@@ -19,7 +19,7 @@ public class FunctionObjectState : Select3DState
     public override void exit()
     {
         base.exit();
-        UITool.SetActionFalse(modelMenuPage.FunctionPlane.gameObject);
-
+        //UITool.SetActionFalse(modelMenuPage.FunctionPlane.gameObject);
+        //UITool.SetActionTrue(modelMenuPage.OneLevelPlane.gameObject);
     }
 }

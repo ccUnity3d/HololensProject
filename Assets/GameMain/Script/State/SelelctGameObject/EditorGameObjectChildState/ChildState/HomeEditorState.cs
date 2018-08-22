@@ -15,6 +15,8 @@ public class HomeEditorState : EditorState {
     public override void exit()
     {
         base.exit();
+        //UITool.SetActionFalse(modelMenuPage.OneLevelPlane.gameObject);mat_button_OverviewOfEquipment_01
+        //UITool.SetActionTrue(modelMenuPage.EditorPlane.gameObject);
     }
 
 }
