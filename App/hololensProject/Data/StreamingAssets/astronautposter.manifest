@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 3551220238
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4b031e81b08c391bfa20d4de0bb34df9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 528c589e1e3c5e5fa1d248f0259ce117
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+Assets:
+- Assets/GameMain/Prefab/AstronautPoster.prefab
+Dependencies: []

@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.WSA;
 
-public class ShowBoundingBoxGizmoHandle : MonoBehaviour {
+public class ShowBoundingBoxGizmoHandle : MonoBehaviour ,IInputHandler, ISourceStateHandler
+{
 
     private ShowBoundingBoxRig rig;
     private Transform transformToAffect;
@@ -138,10 +139,10 @@ public class ShowBoundingBoxGizmoHandle : MonoBehaviour {
         isHandRotationAvailable = true;
 
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
-        if (HolographicSettings.IsDisplayOpaque == false)
-        {
-            isHandRotationAvailable = false;
-        }
+        //if (HolographicSettings.IsDisplayOpaque == false)
+        //{
+        //    isHandRotationAvailable = false;
+        //}
 #endif
         cachedRenderer = gameObject.GetComponent<Renderer>();
     }
@@ -169,10 +170,13 @@ public class ShowBoundingBoxGizmoHandle : MonoBehaviour {
                 if (isHandRotationAvailable && handMotionForRotation == BoundingBoxGizmoHandleHandMotionType.handRotatesToRotateObject)
                 {
                     ApplyRotation(currentHandOrientation);
+                    Debug.Log("Orientation");
                 }
                 else
                 {
                     ApplyRotation(currentHandPosition);
+                    Debug.Log("currentHandPosition");
+
                 }
             }
         }
@@ -216,7 +220,7 @@ public class ShowBoundingBoxGizmoHandle : MonoBehaviour {
     }
     private void ApplyRotation(Quaternion currentHandOrientation)
     {
-#if UNITY_2017_1_OR_NEWER
+//#if UNITY_2017_1_OR_NEWER
         Matrix4x4 m = Matrix4x4.Rotate(initialHandOrientation);
         Vector3 initRay = new Vector3(0, 0, 1);
         initRay = m.MultiplyPoint(initRay);
@@ -253,7 +257,7 @@ public class ShowBoundingBoxGizmoHandle : MonoBehaviour {
             transformToAffect.localRotation = initialRotation;
             transformToAffect.Rotate(axis, angle * 5.0f);
         }
-#endif // UNITY_2017_1_OR_NEWER
+//#endif // UNITY_2017_1_OR_NEWER
     }
     private void ApplyRotation(Vector3 currentHandPosition)
     {

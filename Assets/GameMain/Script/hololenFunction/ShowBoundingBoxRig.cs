@@ -125,13 +125,13 @@ public class ShowBoundingBoxRig : Singleton<ShowBoundingBoxRig> {
 
     public void Activate()
     {
-        InputManager.Instance.RaiseBoundingBoxRigActivated(gameObject);
+        InputManager.Instance.RaiseBoundingBoxRigActivated(objectToBound);
         ShowRig = true;
     }
 
     public void Deactivate()
     {
-        InputManager.Instance.RaiseBoundingBoxRigDeactivated(gameObject);
+        InputManager.Instance.RaiseBoundingBoxRigDeactivated(objectToBound);
         ShowRig = false;
     }
 
@@ -211,7 +211,7 @@ public class ShowBoundingBoxRig : Singleton<ShowBoundingBoxRig> {
         ClearHandles();
         UpdateCornerHandles();
         UpdateRotateHandles();
-        //ParentHandles();
+        ParentHandles();
         UpdateHandles();
     }
 

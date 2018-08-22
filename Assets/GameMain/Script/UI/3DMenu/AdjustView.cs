@@ -57,15 +57,15 @@ public class AdjustView : MonoBehaviour, BaseInput
     public void OnInputClicked(InputClickedEventData eventData)
     {
         audioManager.OnClickAudio();
-        toggle = !toggle;
-        if (toggle)
-        {
-            editorMachine.setState(AdjustState.Name);
-        }
-        else
-        {
-            editorMachine.setState(AdjustCancelState.Name);
-        }
+        //toggle = !toggle;
+        //if (toggle)
+        //{
+           editorMachine.setState(AdjustState.Name);
+        //}
+        //else
+        //{
+            //editorMachine.setState(AdjustCancelState.Name);
+        //}
     }
 
     public void OnInputDown(InputEventData eventData)

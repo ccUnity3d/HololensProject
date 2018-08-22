@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2763252795
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 57cc30bee56e006b15ac18bb6c190527
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 528c589e1e3c5e5fa1d248f0259ce117
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+Assets:
+- Assets/GameMain/Prefab/RocketPoster.prefab
+Dependencies: []

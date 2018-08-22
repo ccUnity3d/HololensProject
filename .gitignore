@@ -6,7 +6,7 @@
 logs/
 UnityPackageManager/
 UWP/
-App/
+
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
