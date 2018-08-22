@@ -8,7 +8,7 @@
 hololensProject.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 hololensProject\App.cs: 419D3940F47A6D7B5D813EE2A0C78350
-hololensProject\hololensProject.csproj: 6B5CFB78F38CCBDCACEE9488832721C1
+hololensProject\hololensProject.csproj: 943F818CBC2DF13E4A8C25EA20CF9859
 hololensProject\hololensProject.csproj.user: modified
 hololensProject\Package.appxmanifest: C975BBFEFFC2D685FD95301E257DBD9A
 hololensProject\project.json: 1D02BC64BAC0D041019673A1C4C51737
